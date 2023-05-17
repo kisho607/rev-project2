@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>FOOTBALL COACHING CENTER</title>
+  <link rel="stylesheet" type="text/css" href="revi.css">
+</head>
+<body>
+  <h1>FOOTBALL COACHING CENTER</h1><br><br>
+  
+  <form>
+    <div class="form-group">
+      <label for="timing">Coaching Timing:</label>
+      <select id="timing" name="timing">
+        <option value="morning">Morning</option>
+        <option value="afternoon">Afternoon</option>
+        <option value="evening">Evening</option>
+      </select>
+    </div><br><br>
+    
+    <div class="form-group">
+      <label for="hours">Number of Hours:</label>
+      <input type="number" id="hours" name="hours" min="1" max="10" required>
+    </div><br><br>
+    <div class="form-group">
+      <label for="students">Number of Students:</label>
+      <input type="number" id="students" name="students" min="1" max="10" required>
+    </div><br><br>
+    
+    <div class="form-group">
+      <label for="payment"; style="color: rgb(1, 15, 18);">AMOUNT PER PERSON</label><br><br>
+    <input type="checkbox" id="hours" value="payments">
+    <label for="week">Rs 3000(weekly 3 days/Month)</label><br><br>
+    <input type="checkbox" id="hours" value="payments">
+    <label for="week">Rs 4000(weekly 4 days/Month)</label><br><br>
+    <input type="checkbox" id="hours" value="payments">
+    <label for="week">Rs 5000(weekly 4 days/Month)</label>
+    </div><br><br>
+    
+    <div class="form-group">
+      <label for="payment-options"; style="color: rgb(4, 4, 4);">PAYMENT OPTIONS</label>
+      <select id="payment-options" name="payment-options">
+        <option value="credit">Credit Card</option>
+        <option value="debit">Debit Card</option>
+       
+        <option value="bank">Bank Transfer</option>
+      </select>
+    </div><br><br>
+    
+    <div class="form-group">
+      <input type="submit" value="Register">
+    </div>
+  </form>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body { font-size: 16px; }
+header { padding: 5px; font-size: .8em; }
+header h1 { font-size: 1.5em; font-weight: bold; }
+table { border-top: solid 1px #ddd; border-bottom: solid 1px #ddd; }
+table tr { border-bottom: solid 1px #ddd; }
+section > p { text-align: center; padding: 5px; }
+
+/* Showing all columns */
+.v1 thead { display: none; }
+.v1 tr td { width: 100%; display: block; position: relative; padding-left: 40%; line-height: 24px }
+.v1 tr td:before { position: absolute; left: 5px; }
+.v1 tbody tr:nth-of-type(2n-1) { background: rgba(0,0,0,.1) }
+.v1 tr:not(.bye) td:nth-of-type(1):before { content: 'Opponent';  }
+.v1 tr td:nth-of-type(2):before { content: 'Date'; }
+.v1 tr td:nth-of-type(3):before { content: 'Location'; }
+.v1 tr td:nth-of-type(4):before { content: 'Tickets'; }
+.v1 tr td:nth-of-type(5):before { content: 'Results'; }
+.v1 tr td:nth-of-type(6):before { content: 'Record'; }
+
+@media all and (min-width : 568px) {
+  header { font-size: 1em; }
+  .v1 thead { display: table-header-group; }
+  .v1 tr td:before { position: static; display: none; content: ''; }
+  .v1 tr th { padding: 3px 10px; }
+  .v1 tr td { display: table-cell; postion: static; padding-left: 0; padding: 3px 10px; }
+  .v1 tr th:nth-of-type(1),.v1 tr td:nth-of-type(1) { width: 20%; }
+  .v1 tr th:nth-of-type(2),.v1 tr td:nth-of-type(2) { width: 20%; }
+  .v1 tr th:nth-of-type(3),.v1 tr td:nth-of-type(3) { width: 20%; }
+  .v1 tr th:nth-of-type(4),.v1 tr td:nth-of-type(4) { width: 20%; }
+  .v1 tr th:nth-of-type(5),.v1 tr td:nth-of-type(5) { width: 20%; }
+}
+
+/* removing unimportant columns  */
+.v2 tr th, .v2 tr td { padding: 3px 5px; }
+.v2 tr th:nth-of-type(3),.v2 tr td:nth-of-type(3),
+.v2 tr th:nth-of-type(4),.v2 tr td:nth-of-type(4),
+.v2 tr th:nth-of-type(6),.v2 tr td:nth-of-type(6) { display: none; }
+  @media all and (min-width : 480px) {
+    .v2 tr th:nth-of-type(3),.v2 tr td:nth-of-type(3) { display: table-cell; }
+  }
+  @media all and (min-width : 525px) {
+    .v2 tr th:nth-of-type(4),.v2 tr td:nth-of-type(4) { display: table-cell; }    
+  }
+  @media all and (min-width : 568px) {
+    .v2 tr th:nth-of-type(6),.v2 tr td:nth-of-type(6) { display: table-cell; }    
+  }
+    </style>
+</head>
+<body>
+    <section> 
+        <p><a href="#" class="toggletable">Toggle this table</a></p>
+        <header><h1>Auburn 2014 Football Schedule</h1></header>
+        <section>
+          <table class="v1">
+            <thead>
+              <tr>
+                <th>Opponent</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Tickets</th>
+                <th>Results</th> 
+                <th>Record</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-date="Aug. 30, 3:00 PM">
+                <td>Arkansas</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>1-0</td>
+              </tr>
+              <tr class="bye">
+                <td colspan="6">
+                  <span>BYE</span>
+                </td>
+              </tr>
+              <tr>
+                <td>San Jose State </td>
+                <td>Sept. 6, TBA</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>51-7</td>
+                <td>2-0</td>
+              </tr>
+              <tr>
+                <td>@Kansas St.</td>
+                <td>Sept. 18, TBA</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>3-0</td>
+              </tr>
+              <tr>
+                <td>Louisiana Tech</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>4-0</td>
+              </tr>
+              <tr>
+                <td>LSU</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>5-0</td>
+              </tr>
+              <tr>
+                <td>@Mississippi St.</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>6-0</td>
+              </tr>
+              <tr class="bye">
+                <td colspan="6">
+                  <span>BYE</span>
+                </td>
+              </tr>
+              <tr>
+                <td>South Carolina</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>7-0</td>
+              </tr>
+              <tr>
+                <td>@Ole Miss</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>8-0</td>
+              </tr>
+              <tr>
+                <td>Texas A&M</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>9-0</td>
+              </tr>
+              <tr>
+                <td>@Georgia</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>10-0</td>
+              </tr>
+              <tr>
+                <td>Samford</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>11-0</td>
+              </tr>        
+              <tr>
+                <td>@Alabama</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>12-0</td>
+              </tr>        
+            </tbody>
+          </table>
+        </section>
+      </section>
+      
+      <section>
+        <p><a href="#" class="toggletable">Toggle this table</a></p>
+        <header><h1>Auburn 2014 Football Schedule</h1></header>
+        <section>
+          <table class="v2">
+            <thead>
+              <tr>
+                <th>Opponent</th>
+                <th>Date</th>
+                <th>Location</th>
+                <th>Tickets</th>
+                <th>Results</th> 
+                <th>Record</th> 
+              </tr>
+            </thead>
+            <tbody>
+              <tr data-date="Aug. 30, 3:00 PM">
+                <td>Arkansas</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>1-0</td>
+              </tr>
+              <tr class="bye">
+                <td colspan="6">
+                  <span>BYE</span>
+                </td>
+              </tr>
+              <tr>
+                <td>San Jose State </td>
+                <td>Sept. 6, TBA</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>51-7</td>
+                <td>2-0</td>
+              </tr>
+              <tr>
+                <td>@Kansas St.</td>
+                <td>Sept. 18, TBA</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>3-0</td>
+              </tr>
+              <tr>
+                <td>Louisiana Tech</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>4-0</td>
+              </tr>
+              <tr>
+                <td>LSU</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>5-0</td>
+              </tr>
+              <tr>
+                <td>@Mississippi St.</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>6-0</td>
+              </tr>
+              <tr class="bye">
+                <td colspan="6">
+                  <span>BYE</span>
+                </td>
+              </tr>
+              <tr>
+                <td>South Carolina</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>7-0</td>
+              </tr>
+              <tr>
+                <td>@Ole Miss</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>8-0</td>
+              </tr>
+              <tr>
+                <td>Texas A&M</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>9-0</td>
+              </tr>
+              <tr>
+                <td>@Georgia</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>10-0</td>
+              </tr>
+              <tr>
+                <td>Samford</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>11-0</td>
+              </tr>        
+              <tr>
+                <td>@Alabama</td>
+                <td>Aug. 30, 3:00 PM</td>
+                <td>Auburn, AL</td>
+                <td><a href="#">Buy Tickets</a></td>
+                <td>31-7</td>
+                <td>12-0</td>
+              </tr>        
+            </tbody>
+          </table>
+        </section>
+      </section>
+</body>
+</html>

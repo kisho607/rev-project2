@@ -1,0 +1,24 @@
+h1{
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWqTE8Q_7ATICSCRB7U8ljJflHKDXy3MI4eSYQS0p36g&usqp=CAU&ec=48665698');
+    text-align: center;
+    color: aliceblue;
+    padding: 70px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    margin-top: 0px;
+    width:auto;
+    height: fit-content;
+}
+body{
+    background-color: antiquewhite;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:auto;
+    height:600px;
+    margin:auto;
+    font-size: large;
+    text-align: center;
+}
